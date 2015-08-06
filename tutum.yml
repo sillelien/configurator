@@ -1,8 +1,3 @@
-client:
-  image: sillelien/sc-client
-  links:
-    - server:scserver
-
 server:
   image: sillelien/sc-server
   volumes:
