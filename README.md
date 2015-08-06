@@ -39,13 +39,17 @@ You can get going straight away using the Deploy to Tutum button.
 
 [![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
 
-Client: [![Docker Registry](https://img.shields.io/docker/pulls/sillelien/configurator-client.svg)](https://registry.hub.docker.com/u/sillelien/configurator-client)
+Test Client: [![Docker Registry](https://img.shields.io/docker/pulls/sillelien/sc-client.svg)](https://registry.hub.docker.com/u/sillelien/sc-client)
 
-Server: [![Docker Registry](https://img.shields.io/docker/pulls/sillelien/configurator-server.svg)](https://registry.hub.docker.com/u/sillelien/configurator-server)
+Server: [![Docker Registry](https://img.shields.io/docker/pulls/sillelien/sc-server.svg)](https://registry.hub.docker.com/u/sillelien/sc-server)
 
-Client: [![Image Layers](https://badge.imagelayers.io/sillelien/configurator-client.svg)](https://imagelayers.io/?images=sillelien/configurator-client:latest 'Get your own badge on imagelayers.io') 
+Editor: [![Docker Registry](https://img.shields.io/docker/pulls/sillelien/sc-editor.svg)](https://registry.hub.docker.com/u/sillelien/sc-editor)
 
-Server: [![Image Layers](https://badge.imagelayers.io/sillelien/configurator-server.svg)](https://imagelayers.io/?images=sillelien/configurator-server:latest 'Get your own badge on imagelayers.io') 
+Test Client: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-client.svg)](https://imagelayers.io/?images=sillelien/sc-client:latest 'Get your own badge on imagelayers.io') 
+
+Server: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-server.svg)](https://imagelayers.io/?images=sillelien/sc-server:latest 'Get your own badge on imagelayers.io') 
+
+Editor: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-editor.svg)](https://imagelayers.io/?images=sillelien/sc-editor:latest 'Get your own badge on imagelayers.io') 
 
 [![GitHub License](https://img.shields.io/github/license/sillelien/configurator.svg)](https://raw.githubusercontent.com/sillelien/configurator/master/LICENSE)
 
