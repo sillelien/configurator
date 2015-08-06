@@ -6,7 +6,7 @@ client:
 server:
   image: sillelien/sc-server
   volumes:
-    - tmp/server:/repo:rw
+    - /var/sc/server:/repo:rw
   ports:
     - "1500"
     - "9418"
@@ -18,7 +18,7 @@ editor:
   ports:
     - "8080:8080"
 
-
+#Just so you can see what's going on
 testclient:
   image: sillelien/sc-client
   command: sh -c "while true; do ls -la /config/; sleep 10; done"
