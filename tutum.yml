@@ -1,0 +1,27 @@
+client:
+  build: client
+  links:
+    - server:scserver
+
+server:
+  image: sillelien/sc-server
+  volumes:
+    - tmp/server:/repo:rw
+  ports:
+    - "1500"
+    - "9418"
+
+editor:
+  image: sillelien/sc-editor
+  links:
+    - server:scserver
+  ports:
+    - "8080:8080"
+
+
+testclient:
+  image: sillelien/sc-client
+  command: sh -c "while true; do ls -la /config/; sleep 10; done"
+  links:
+    - server:scserver
+
