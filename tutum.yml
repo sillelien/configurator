@@ -1,13 +1,15 @@
 server:
   image: sillelien/sc-server
   volumes:
-    - /var/sc/server:/repo:rw
+    - /var/sc/server:/repo
   ports:
     - "1500"
     - "9418"
 
 editor:
   image: sillelien/sc-editor
+  volumes:
+    - /var/sc/editor:/config
   links:
     - server:scserver
   ports:

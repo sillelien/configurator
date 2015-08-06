@@ -4,8 +4,6 @@ VOLUME /config
 
 EXPOSE 8000
 
-
-
 RUN echo "deb http://us.archive.ubuntu.com/ubuntu precise main universe" >> /etc/apt/sources.list
 RUN apt-get update && apt-get install -y build-essential  curl tar python git gcc g++ make ca-certificates npm nodejs
 
