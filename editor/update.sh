@@ -4,7 +4,10 @@ git config --global user.name "Configurator @ $(hostname)"
 
 if [ ! -d /config/.git ]
 then
-   git clone git://${SCSERVER_PORT_9418_TCP_ADDR}:${SCSERVER_PORT_9418_TCP_PORT}/config /config
+   while ! git clone git://${SCSERVER_PORT_9418_TCP_ADDR}:${SCSERVER_PORT_9418_TCP_PORT}/config /config
+   do
+    echo "Retrying to connect to server"
+   done
    cd /config
 fi
 
