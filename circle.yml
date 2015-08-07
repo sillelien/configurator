@@ -29,25 +29,23 @@ deployment:
   production:
       branch: master
       commands:
-          - cd server && docker build -t sillelien/sc-server:$(cat .release) .
-          - cd client && docker build -t sillelien/sc-client:$(cat .release) .
-          - cd editor && docker build -t sillelien/sc-editor:$(cat .release) .
-
-          - cd server && docker build -t sillelien/sc-server .
-          - cd client && docker build -t sillelien/sc-client .
-          - cd editor && docker build -t sillelien/sc-editor .
-
-          - docker push sillelien/sc-server:$(cat .release)
-          - docker push sillelien/sc-client:$(cat .release)
-          - docker push sillelien/sc-editor:$(cat .release)
-
-          - docker push sillelien/sc-server
-          - docker push sillelien/sc-client
-          - docker push sillelien/sc-editor
+        - cd server && docker build -t sillelien/sc-server:$(cat .release) .
+        - cd client && docker build -t sillelien/sc-client:$(cat .release) .
+        - cd editor && docker build -t sillelien/sc-editor:$(cat .release) .
+        - cd server && docker build -t sillelien/sc-server .
+        - cd client && docker build -t sillelien/sc-client .
+        - cd editor && docker build -t sillelien/sc-editor .
+        - docker push sillelien/sc-server:$(cat .release)
+        - docker push sillelien/sc-client:$(cat .release)
+        - docker push sillelien/sc-editor:$(cat .release)
+        - docker push sillelien/sc-server
+        - docker push sillelien/sc-client
+        - docker push sillelien/sc-editor
 
   development:
-      branch: dev
-          - docker push sillelien/sc-server:${CIRCLE_BRANCH}
-          - docker push sillelien/sc-client:${CIRCLE_BRANCH}
-          - docker push sillelien/sc-editor:${CIRCLE_BRANCH}
+     branch: dev
+     commands:
+        - docker push sillelien/sc-server:${CIRCLE_BRANCH}
+        - docker push sillelien/sc-client:${CIRCLE_BRANCH}
+        - docker push sillelien/sc-editor:${CIRCLE_BRANCH}
 
