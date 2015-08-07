@@ -1,4 +1,8 @@
 #!/usr/bin/with-contenv sh
+
+git config --global user.email "configurator-server@$(hostname)"
+git config --global user.name "Configurator Server @ $(hostname)"
+
 set -ex
 if [ -d /repo/config/.git ]
 then
@@ -7,6 +11,10 @@ else
     mkdir -p /repo/config
     cd /repo/config
     git init
+    git checkout -b master
+    touch .scinit
+    git add .scinit
+    git commit -am "Initialized"
     git checkout -b server
     touch .git/git-daemon-export-ok
 fi
