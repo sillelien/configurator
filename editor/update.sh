@@ -15,4 +15,4 @@ cd /config
 
 git pull
 
-sleep 3600
+sleep 2147483647
