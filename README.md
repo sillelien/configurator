@@ -13,11 +13,13 @@ Sillelien Configurator comes in three parts, a server, an editor and your client
 
 1) Deploy the server
  
-2) Deploy the editor and visit the GUI
+2) Deploy the [Codebox](http://codebox.io) editor and visit the GUI
 
     http://{editor-ip}:8080
     
 If you haven't supplied credential environment variables then you'll need to log in with username/password of insecure/insecure.    
+
+Don't forget you need to **commit** then **push** changes for them to be sent to the server.
 
 3) 
 

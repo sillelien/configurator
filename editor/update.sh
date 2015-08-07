@@ -13,6 +13,6 @@ fi
 
 cd /config
 
-git pull
+git pull origin master
 
 sleep 2147483647
