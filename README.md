@@ -47,6 +47,38 @@ And that's it, the directory /config will now contain any files you want to use 
 
 You can get going straight away using the Deploy to Tutum button.
 
+
+## Example Deployment
+
+Please use tagged releases where possible, you'll get a better experience and we can support you better.
+
+```yaml
+server:
+  image: sillelien/sc-server:${RELEASE}
+  volumes:
+    - /var/sc/server:/repo
+  ports:
+    - "1500"
+    - "9418"
+
+editor:
+  image: sillelien/sc-editor:${RELEASE}
+  volumes:
+    - /var/sc/editor:/config
+  links:
+    - server:scserver
+  ports:
+    - "80:8080"
+
+#Just so you can see what's going on
+testclient:
+  image: sillelien/sc-client:${RELEASE}
+  command: sh -c "while true; do ls -la /config/; sleep 10; done"
+  links:
+    - server:scserver
+
+```
+
 [![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
 
 ## Badges
