@@ -2,6 +2,8 @@
 
 Configure your Docker images on multiple machines from a single GUI.
 
+**If you use this image please consider giving it a star on Github**
+
 [![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
 
 ## Introduction
