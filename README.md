@@ -1,5 +1,7 @@
 # Sillelien Configurator
 
+[![Join the chat at https://gitter.im/sillelien/configurator](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/sillelien/configurator?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Configure your Docker images on multiple machines from a single GUI.
 
 **If you use this image please consider giving it a star on Github**
