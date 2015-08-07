@@ -6,7 +6,7 @@ Configure your Docker images on multiple machines from a single GUI.
 
 ## Introduction
 
-Sillelien Configurator comes in three parts, a server, an editor and your clients. The server must stay at a fixed location and have a mapped volume, it manages a very simple git repository containing your configuration. The editor is a seperate image powered by [Codebox](http://codebox.io) which allows you to edit any of the files in the git repository. Finally you clients can then run a simple one line command to start getting updates from the server (into the /config directory).
+Sillelien Configurator comes in three parts, a server, an editor and your clients. The server must stay at a fixed location and have a mapped volume onto the host, it manages a very simple git repository containing your configuration. The editor is a seperate image powered by [Codebox](http://codebox.io) which allows you to edit any of the files in the git repository. Finally you clients can then run a simple one line command to start getting updates from the server (into the /config directory).
 
 ## Quick Start
 
@@ -23,7 +23,7 @@ Don't forget you need to **commit** then **push** changes for them to be sent to
 
 3) 
 
-EITHER: On each client that uses configurator you need to install git and then make sure you run the following as a background daemon:
+EITHER: On each client that uses configurator you need to name the link to the server as `scserver`. Install git in your client image and then make sure you run the following as a background daemon:
 
 ```bash
     curl http://${SCSERVER_PORT_1500_TCP_ADDR}:${SCSERVER_PORT_1500_TCP_PORT} | sh
@@ -35,11 +35,13 @@ OR: Just run this line on startup for static configuration.
     git clone git://${SCSERVER_PORT_9418_TCP_ADDR}:${SCSERVER_PORT_9418_TCP_PORT}/config /config
 ```    
     
-And that's it, the directory /config will now contain any files you wish to edit and share.
+And that's it, the directory /config will now contain any files you want to use to configure your Docker images.
 
 You can get going straight away using the Deploy to Tutum button.
 
 [![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
+
+## Badges
 
 Test Client: [![Docker Registry](https://img.shields.io/docker/pulls/sillelien/sc-client.svg)](https://registry.hub.docker.com/u/sillelien/sc-client)
 
