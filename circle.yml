@@ -1,0 +1,53 @@
+machine:
+  services:
+    - docker
+  environment:
+    RELEASE: 0.0.${CIRCLE_BUILD_NUM}
+
+dependencies:
+  cache_directories:
+    - "~/docker"
+
+  override:
+      - cd ~ && git clone https://github.com/sillelien/build-utils.git && chmod a+x ~/build-utils/*.sh
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - cd server && docker build -t sillelien/sc-server:${CIRCLE_BRANCH} .
+      - cd client && docker build -t sillelien/sc-client:${CIRCLE_BRANCH} .
+      - cd editor && docker build -t sillelien/sc-editor:${CIRCLE_BRANCH} .
+
+test:
+  override:
+    - "echo no tests yet"
+
+deployment:
+
+  staging:
+      branch: staging
+      commands:
+         - ~/build-utils/promote_from_staging.sh
+
+  production:
+      branch: master
+      commands:
+          - cd server && docker build -t sillelien/sc-server:$(cat .release) .
+          - cd client && docker build -t sillelien/sc-client:$(cat .release) .
+          - cd editor && docker build -t sillelien/sc-editor:$(cat .release) .
+
+          - cd server && docker build -t sillelien/sc-server .
+          - cd client && docker build -t sillelien/sc-client .
+          - cd editor && docker build -t sillelien/sc-editor .
+
+          - docker push sillelien/sc-server:$(cat .release)
+          - docker push sillelien/sc-client:$(cat .release)
+          - docker push sillelien/sc-editor:$(cat .release)
+
+          - docker push sillelien/sc-server
+          - docker push sillelien/sc-client
+          - docker push sillelien/sc-editor
+
+  development:
+      branch: dev
+          - docker push sillelien/sc-server:${CIRCLE_BRANCH}
+          - docker push sillelien/sc-client:${CIRCLE_BRANCH}
+          - docker push sillelien/sc-editor:${CIRCLE_BRANCH}
+
