@@ -33,13 +33,13 @@ Don't forget you need to **commit** then **push** changes for them to be sent to
 EITHER: On each client that uses configurator you need to name the link to the server as `scserver`. Install git in your client image and then make sure you run the following as a background daemon:
 
 ```bash
-    curl http://${SCSERVER_PORT_1500_TCP_ADDR}:${SCSERVER_PORT_1500_TCP_PORT} | sh
+    curl http://: | sh
 ```
 
 OR: Just run this line on startup for static configuration.
  
 ```bash
-    git clone git://${SCSERVER_PORT_9418_TCP_ADDR}:${SCSERVER_PORT_9418_TCP_PORT}/config /config
+    git clone git://:/config /config
 ```    
     
 And that's it, the directory /config will now contain any files you want to use to configure your Docker images.
@@ -54,7 +54,7 @@ Please use tagged releases where possible, you'll get a better experience and we
 ```yaml
 
         server:
-          image: sillelien/sc-server:${RELEASE}
+          image: sillelien/sc-server:0.0.10
           volumes:
             - /var/sc/server:/repo
           ports:
@@ -62,7 +62,7 @@ Please use tagged releases where possible, you'll get a better experience and we
             - "9418"
         
         editor:
-          image: sillelien/sc-editor:${RELEASE}
+          image: sillelien/sc-editor:0.0.10
           volumes:
             - /var/sc/editor:/config
           links:
@@ -72,7 +72,7 @@ Please use tagged releases where possible, you'll get a better experience and we
         
         #Just so you can see what's going on
         testclient:
-          image: sillelien/sc-client:${RELEASE}
+          image: sillelien/sc-client:0.0.10
           command: sh -c "while true; do ls -la /config/; sleep 10; done"
           links:
             - server:scserver
