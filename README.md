@@ -2,7 +2,7 @@
 
 Configure your Docker images on multiple machines from a single GUI.
 
-${BLURB}
+
 
 [![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
 
@@ -54,7 +54,7 @@ Please use tagged releases where possible, you'll get a better experience and we
 ```yaml
 
         server:
-          image: sillelien/sc-server:0.0.19
+          image: sillelien/sc-server:0.0.24
           volumes:
             - /var/sc/server:/repo
           ports:
@@ -62,7 +62,7 @@ Please use tagged releases where possible, you'll get a better experience and we
             - "9418"
         
         editor:
-          image: sillelien/sc-editor:0.0.19
+          image: sillelien/sc-editor:0.0.24
           volumes:
             - /var/sc/editor:/config
           links:
@@ -72,7 +72,7 @@ Please use tagged releases where possible, you'll get a better experience and we
         
         #Just so you can see what's going on
         testclient:
-          image: sillelien/sc-client:0.0.19
+          image: sillelien/sc-client:0.0.24
           command: sh -c "while true; do ls -la /config/; sleep 10; done"
           links:
             - server:scserver
