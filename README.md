@@ -1,12 +1,22 @@
-${HEADER}
 
-# Sillelien Configurator ${STATE_ACTIVE}
+
+# Sillelien Configurator [![Active Development](https://img.shields.io/badge/Status-Active_Initial_Development-orange.svg?style=flat)](http://github.com/sillelien/configurator)
 
 Configure your Docker images on multiple machines from a single GUI.
 
-${TUTUM}
+[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
 
-${BLURB}
+-------
+
+**If you use this project please consider giving us a star on [GitHub](http://github.com/sillelien/configurator). Also if you can spare 30 secs of your time please let us know your priorities here https://sillelien.wufoo.com/forms/zv51vc704q9ary/  - thanks, that really helps!**
+
+Please contact us through chat or through GitHub Issues.
+
+[![GitHub Issues](https://img.shields.io/github/issues/sillelien/configurator.svg)](https://github.com/sillelien/configurator/issues).
+
+[![Join the chat at https://gitter.im/sillelien/configurator](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/sillelien/configurator?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+-------
 
 
 ## Introduction
@@ -52,7 +62,7 @@ Please use tagged releases where possible, you'll get a better experience and we
 ```yaml
 
         server:
-          image: sillelien/sc-server:${RELEASE}
+          image: sillelien/sc-server:0.0.54
           volumes:
             - /var/sc/server:/repo
           ports:
@@ -60,7 +70,7 @@ Please use tagged releases where possible, you'll get a better experience and we
             - "9418"
         
         editor:
-          image: sillelien/sc-editor:${RELEASE}
+          image: sillelien/sc-editor:0.0.54
           volumes:
             - /var/sc/editor:/config
           links:
@@ -70,14 +80,14 @@ Please use tagged releases where possible, you'll get a better experience and we
         
         #Just so you can see what's going on
         testclient:
-          image: sillelien/sc-client:${RELEASE}
+          image: sillelien/sc-client:0.0.54
           command: sh -c "while true; do ls -la /config/; sleep 10; done"
           links:
             - server:scserver
 
 ```
 
-${TUTUM}
+[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
 
 ## Badges
 
@@ -99,4 +109,6 @@ Editor: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-editor.svg?st
     
 
 
-${FOOTER}
+--------
+
+(c) 2015 Sillelien all rights reserved. Please see [![GitHub License](https://img.shields.io/github/license/sillelien/configurator.svg)](https://raw.githubusercontent.com/sillelien/configurator/master/LICENSE) for license details of this project. Please visit http://sillelien.com for help and commercial support or raise issues here ![GitHub Issues](https://img.shields.io/github/issues/sillelien/configurator.svg)](https://github.com/sillelien/configurator/issues).
