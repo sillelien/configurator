@@ -3,8 +3,9 @@ server:
   volumes:
     - /var/sc/server:/repo
   ports:
-    - "1500"
-    - "9418"
+    - "1500" # Client script server
+    - "11300" # Reserved for beanstalk
+    - "9418" # Git server
 
 editor:
   image: sillelien/sc-editor
