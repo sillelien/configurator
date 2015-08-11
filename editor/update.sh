@@ -13,6 +13,7 @@ fi
 
 cd /config
 
+git remote set-url origin git://${SCSERVER_PORT_9418_TCP_ADDR}:${SCSERVER_PORT_9418_TCP_PORT}/config
 while ! git pull origin master
 do
     sleep 10
