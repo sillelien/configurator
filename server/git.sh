@@ -27,4 +27,4 @@ chmod a+x /repo/config/.git/hooks/*
 
 #http://railsware.com/blog/2013/09/19/taming-the-git-daemon-to-quickly-share-git-repository/
 
-git daemon  --base-path=/repo --enable=receive-pack --reuseaddr --informative-errors --export-all --verbose
+git daemon  --base-path=/repo --enable=receive-pack --reuseaddr --informative-errors --export-all 
