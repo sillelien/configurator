@@ -1,10 +1,10 @@
-${HEADER}
+
 
 # Sillelien Configurator
 
 Configure your Docker images on multiple machines from a single GUI.
 
-${BLURB}
+**If you use this project please consider giving us a star on [GitHub](http://github.com/sillelien/configurator) . Also if you can spare 30 secs of your time please let us know your priorities here https://sillelien.wufoo.com/forms/zv51vc704q9ary/  - thanks, that really helps!**
 
 [![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
 
@@ -56,7 +56,7 @@ Please use tagged releases where possible, you'll get a better experience and we
 ```yaml
 
         server:
-          image: sillelien/sc-server:0.0.30
+          image: sillelien/sc-server:0.0.28
           volumes:
             - /var/sc/server:/repo
           ports:
@@ -64,7 +64,7 @@ Please use tagged releases where possible, you'll get a better experience and we
             - "9418"
         
         editor:
-          image: sillelien/sc-editor:0.0.30
+          image: sillelien/sc-editor:0.0.28
           volumes:
             - /var/sc/editor:/config
           links:
@@ -74,7 +74,7 @@ Please use tagged releases where possible, you'll get a better experience and we
         
         #Just so you can see what's going on
         testclient:
-          image: sillelien/sc-client:0.0.30
+          image: sillelien/sc-client:0.0.28
           command: sh -c "while true; do ls -la /config/; sleep 10; done"
           links:
             - server:scserver
@@ -103,4 +103,4 @@ Editor: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-editor.svg)](
     
 [![GitHub Release](https://img.shields.io/github/release/sillelien/configurator.svg)](https://github.com/sillelien/configurator)
 
-${FOOTER}
+(c) 2015 Sillelien all rights reserved. Please see LICENSE for license details of this project. Please visit http://sillelien.com for help and commercial support.
