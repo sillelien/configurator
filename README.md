@@ -4,11 +4,9 @@ ${HEADER}
 
 Configure your Docker images on multiple machines from a single GUI.
 
-${BLURB}
-
 ${TUTUM}
 
-
+${BLURB}
 
 
 ## Introduction
