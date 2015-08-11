@@ -97,7 +97,7 @@ Server: [![Docker Registry](https://img.shields.io/docker/pulls/sillelien/sc-ser
 
 Editor: [![Docker Registry](https://img.shields.io/docker/pulls/sillelien/sc-editor.svg?style=flat)](https://registry.hub.docker.com/u/sillelien/sc-editor)
 
-Test Client: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-client.svg)?style=flat](https://imagelayers.io/?images=sillelien/sc-client:latest 'Get your own badge on imagelayers.io') 
+Test Client: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-client.svg?style=flat)](https://imagelayers.io/?images=sillelien/sc-client:latest 'Get your own badge on imagelayers.io') 
 
 Server: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-server.svg?style=flat)](https://imagelayers.io/?images=sillelien/sc-server:latest 'Get your own badge on imagelayers.io') 
 
