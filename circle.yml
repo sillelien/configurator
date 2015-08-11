@@ -35,9 +35,9 @@ deployment:
         - cd server && docker build -t sillelien/sc-server .
         - cd client && docker build -t sillelien/sc-client .
         - cd editor && docker build -t sillelien/sc-editor .
-        - docker push sillelien/sc-server:$(cat ../.release)
-        - docker push sillelien/sc-client:$(cat ../.release)
-        - docker push sillelien/sc-editor:$(cat ../.release)
+        - docker push sillelien/sc-server:$(cat .release)
+        - docker push sillelien/sc-client:$(cat .release)
+        - docker push sillelien/sc-editor:$(cat .release)
         - docker push sillelien/sc-server
         - docker push sillelien/sc-client
         - docker push sillelien/sc-editor
