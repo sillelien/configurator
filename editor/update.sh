@@ -32,4 +32,4 @@ chmod a+x /config/.git/hooks/*
 
 ls -la /config/.git/hooks/*
 
-sleep 2147483647
+socat UDP4-RECVFROM:6666,ip-add-membership=224.1.0.1:$(hostname -i),fork EXEC:'git pull'

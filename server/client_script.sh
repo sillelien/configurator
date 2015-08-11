@@ -11,6 +11,7 @@ then
     cd /config
     git checkout -b master
     git fetch --all
+    git pull -u origin master
     git push -u origin master
 fi
 
