@@ -2,7 +2,7 @@ set -ex
 
 apt-get update
 
-DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential  curl python git gcc g++ make ca-certificates npm nodejs localepurge
+DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential  curl python git gcc g++ make ca-certificates npm nodejs localepurge net-tools
 #DEBIAN_FRONTEND=noninteractive  dpkg-reconfigure localepurge
 #DEBIAN_FRONTEND=noninteractive localepurge
 
