@@ -1,8 +1,10 @@
+${HEADER}
+
 # Sillelien Configurator
 
 Configure your Docker images on multiple machines from a single GUI.
 
-**If you use this project please consider giving us a star on [GitHub](http://github.com/sillelien/configurator) . Also if you can spare 30 secs of your time please let us know your priorities here https://sillelien.wufoo.com/forms/zv51vc704q9ary/  - thanks, that really helps!**
+${BLURB}
 
 [![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
 
@@ -101,3 +103,4 @@ Editor: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-editor.svg)](
     
 [![GitHub Release](https://img.shields.io/github/release/sillelien/configurator.svg)](https://github.com/sillelien/configurator)
 
+${FOOTER}
