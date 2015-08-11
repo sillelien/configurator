@@ -81,21 +81,21 @@ ${TUTUM}
 
 ## Badges
 
-Test Client: [![Docker Registry](https://img.shields.io/docker/pulls/sillelien/sc-client.svg)](https://registry.hub.docker.com/u/sillelien/sc-client)
+Test Client: [![Docker Registry](https://img.shields.io/docker/pulls/sillelien/sc-client.svg?style=flat)](https://registry.hub.docker.com/u/sillelien/sc-client)
 
-Server: [![Docker Registry](https://img.shields.io/docker/pulls/sillelien/sc-server.svg)](https://registry.hub.docker.com/u/sillelien/sc-server)
+Server: [![Docker Registry](https://img.shields.io/docker/pulls/sillelien/sc-server.svg?style=flat)](https://registry.hub.docker.com/u/sillelien/sc-server)
 
-Editor: [![Docker Registry](https://img.shields.io/docker/pulls/sillelien/sc-editor.svg)](https://registry.hub.docker.com/u/sillelien/sc-editor)
+Editor: [![Docker Registry](https://img.shields.io/docker/pulls/sillelien/sc-editor.svg?style=flat)](https://registry.hub.docker.com/u/sillelien/sc-editor)
 
-Test Client: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-client.svg)](https://imagelayers.io/?images=sillelien/sc-client:latest 'Get your own badge on imagelayers.io') 
+Test Client: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-client.svg)?style=flat](https://imagelayers.io/?images=sillelien/sc-client:latest 'Get your own badge on imagelayers.io') 
 
-Server: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-server.svg)](https://imagelayers.io/?images=sillelien/sc-server:latest 'Get your own badge on imagelayers.io') 
+Server: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-server.svg?style=flat)](https://imagelayers.io/?images=sillelien/sc-server:latest 'Get your own badge on imagelayers.io') 
 
-Editor: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-editor.svg)](https://imagelayers.io/?images=sillelien/sc-editor:latest 'Get your own badge on imagelayers.io') 
+Editor: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-editor.svg?style=flat)](https://imagelayers.io/?images=sillelien/sc-editor:latest 'Get your own badge on imagelayers.io') 
 
-[![GitHub License](https://img.shields.io/github/license/sillelien/configurator.svg)](https://raw.githubusercontent.com/sillelien/configurator/master/LICENSE)
+[![GitHub License](https://img.shields.io/github/license/sillelien/configurator.svg?style=flat)](https://raw.githubusercontent.com/sillelien/configurator/master/LICENSE)
 
-[![GitHub Issues](https://img.shields.io/github/issues/sillelien/configurator.svg)](https://github.com/sillelien/configurator/issues)
+[![GitHub Issues](https://img.shields.io/github/issues/sillelien/configurator.svg?style=flat)](https://github.com/sillelien/configurator/issues)
     
 
 
