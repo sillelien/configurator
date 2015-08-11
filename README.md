@@ -62,7 +62,7 @@ Please use tagged releases where possible, you'll get a better experience and we
 ```yaml
 
         server:
-          image: sillelien/sc-server:0.0.54
+          image: sillelien/sc-server:0.0.56
           volumes:
             - /var/sc/server:/repo
           ports:
@@ -70,7 +70,7 @@ Please use tagged releases where possible, you'll get a better experience and we
             - "9418"
         
         editor:
-          image: sillelien/sc-editor:0.0.54
+          image: sillelien/sc-editor:0.0.56
           volumes:
             - /var/sc/editor:/config
           links:
@@ -80,7 +80,7 @@ Please use tagged releases where possible, you'll get a better experience and we
         
         #Just so you can see what's going on
         testclient:
-          image: sillelien/sc-client:0.0.54
+          image: sillelien/sc-client:0.0.56
           command: sh -c "while true; do ls -la /config/; sleep 10; done"
           links:
             - server:scserver
@@ -111,4 +111,6 @@ Editor: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-editor.svg?st
 
 --------
 
-(c) 2015 Sillelien all rights reserved. Please see [![GitHub License](https://img.shields.io/github/license/sillelien/configurator.svg)](https://raw.githubusercontent.com/sillelien/configurator/master/LICENSE) for license details of this project. Please visit http://sillelien.com for help and commercial support or raise issues here ![GitHub Issues](https://img.shields.io/github/issues/sillelien/configurator.svg)](https://github.com/sillelien/configurator/issues).
+[![GitHub License](https://img.shields.io/github/license/sillelien/configurator.svg)](https://raw.githubusercontent.com/sillelien/configurator/master/LICENSE)
+
+(c) 2015 Sillelien all rights reserved. Please see [LICENSE](https://raw.githubusercontent.com/sillelien/configurator/master/LICENSE) for license details of this project. Please visit http://sillelien.com for help and commercial support or raise issues on [GitHub](https://github.com/sillelien/configurator/issues).
