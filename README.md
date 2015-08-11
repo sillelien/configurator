@@ -32,7 +32,7 @@ Don't forget you need to **commit** then **push** changes for them to be sent to
 
 3) 
 
-EITHER: On each client that uses configurator you need to name the link to the server as `scserver`. Install git in your client image and then make sure you run the following as a background daemon:
+EITHER: On each client that uses configurator you need to name the link to the server as `scserver`. Install `socat` and `git` packages in your client image and then make sure you run the following as a background daemon:
 
 ```bash
     curl http://${SCSERVER_PORT_1500_TCP_ADDR}:${SCSERVER_PORT_1500_TCP_PORT} | sh

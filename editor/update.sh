@@ -1,4 +1,7 @@
-#!/usr/bin/with-contenv sh
+#!/usr/bin/with-contenv bash
+
+set -ex
+
 git config --global user.email "configurator@$(hostname)"
 git config --global user.name "Configurator @ $(hostname)"
 
@@ -9,14 +12,24 @@ then
     echo "Retrying to connect to server"
     sleep 10
    done
+   cd /config
+   git checkout -b master
+   git fetch --all
+   git push -u origin master
 fi
 
 cd /config
-
 git remote set-url origin git://${SCSERVER_PORT_9418_TCP_ADDR}:${SCSERVER_PORT_9418_TCP_PORT}/config
-while ! git pull origin master
+git branch --set-upstream-to=origin/master master
+while ! git pull
 do
     sleep 10
 done
+
+rm -rf /config/.git/hooks/*.sample
+cp -f /hooks/* /config/.git/hooks/
+chmod a+x /config/.git/hooks/*
+
+ls -la /config/.git/hooks/*
 
 sleep 2147483647

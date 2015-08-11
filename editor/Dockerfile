@@ -17,6 +17,8 @@ RUN chmod 755 /etc/services.d/update/run
 COPY codebox.sh /etc/services.d/codebox/run
 RUN chmod 755 /etc/services.d/codebox/run
 
+COPY hooks/ /hooks/
+
 ENV PORT 8080
 ENV WORKSPACE_DIR /config
 ENV WORKSPACE_NAME "Configuration"

@@ -8,6 +8,7 @@ server:
   volumes:
     - tmp/server:/repo:rw
   ports:
+    - "11300"
     - "1500"
     - "9418"
 
