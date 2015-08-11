@@ -7,12 +7,15 @@ then
    while ! git clone git://${SCSERVER_PORT_9418_TCP_ADDR}:${SCSERVER_PORT_9418_TCP_PORT}/config /config
    do
     echo "Retrying to connect to server"
+    sleep 10
    done
-   cd /config
 fi
 
 cd /config
 
-git pull origin master
+while ! git pull origin master
+do
+    sleep 10
+done
 
 sleep 2147483647
