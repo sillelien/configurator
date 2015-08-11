@@ -1,6 +1,6 @@
 
 
-# Sillelien Configurator
+# Sillelien Configurator ${STATE_ACTIVE}
 
 Configure your Docker images on multiple machines from a single GUI.
 
