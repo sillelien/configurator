@@ -6,11 +6,9 @@ Configure your Docker images on multiple machines from a single GUI.
 
 ${BLURB}
 
-[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
+${TUTUM}
 
-Please contact us through chat (below) or through GitHub Issues.
 
-[![Join the chat at https://gitter.im/sillelien/configurator](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/sillelien/configurator?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
 ## Introduction
@@ -81,7 +79,7 @@ Please use tagged releases where possible, you'll get a better experience and we
 
 ```
 
-[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
+${TUTUM}
 
 ## Badges
 
@@ -101,6 +99,6 @@ Editor: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-editor.svg)](
 
 [![GitHub Issues](https://img.shields.io/github/issues/sillelien/configurator.svg)](https://github.com/sillelien/configurator/issues)
     
-[![GitHub Release](https://img.shields.io/github/release/sillelien/configurator.svg)](https://github.com/sillelien/configurator)
+
 
 ${FOOTER}
