@@ -56,7 +56,7 @@ Please use tagged releases where possible, you'll get a better experience and we
 ```yaml
 
         server:
-          image: sillelien/sc-server:0.0.28
+          image: sillelien/sc-server:${RELEASE}
           volumes:
             - /var/sc/server:/repo
           ports:
@@ -64,7 +64,7 @@ Please use tagged releases where possible, you'll get a better experience and we
             - "9418"
         
         editor:
-          image: sillelien/sc-editor:0.0.28
+          image: sillelien/sc-editor:${RELEASE}
           volumes:
             - /var/sc/editor:/config
           links:
@@ -74,7 +74,7 @@ Please use tagged releases where possible, you'll get a better experience and we
         
         #Just so you can see what's going on
         testclient:
-          image: sillelien/sc-client:0.0.28
+          image: sillelien/sc-client:${RELEASE}
           command: sh -c "while true; do ls -la /config/; sleep 10; done"
           links:
             - server:scserver
