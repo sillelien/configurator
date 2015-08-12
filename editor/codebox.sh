@@ -7,4 +7,7 @@ else
     users="insecure:insecure"
 fi
 
-codebox --title "Sillelien Configurator" --users $users --port 8080 --email user@sillelien.com run /config
+export HOME=/root
+mkdir -p /root/.codebox/packages
+cd /config
+codebox --users $users --port 8080 --email user@sillelien.com  run /config
