@@ -11,6 +11,9 @@ ${BLURB}
 
 ## Introduction
 
+
+[![Screenshot 1](https://raw.githubusercontent.com/sillelien/scheduler/master/.assets/screenshot-1.png)](https://raw.githubusercontent.com/sillelien/scheduler/master/.assets/screenshot-1.png)
+
 Sillelien Configurator is a tool to allow the editing of Docker runtime configuration files. Consider it as an easy to use simplified version of [etcd](https://coreos.com/etcd/) that follows the unix philosophy of "everything is a file". So instead of a custom REST interface you get to edit files in a git repository.
 
 With Configurator you can quickly add a high quality mechanism for changing the runtime configuration of your images. For example Configurator is used in [Sillelien Scheduler](https://github.com/sillelien/scheduler) to allow editing of schedules.
