@@ -11,7 +11,16 @@ ${BLURB}
 
 ## Introduction
 
-Sillelien Configurator comes in three parts, a server, an editor and your clients. The server must stay at a fixed location and have a mapped volume onto the host, it manages a very simple git repository containing your configuration. The editor is a seperate image powered by [Codebox](http://codebox.io) which allows you to edit any of the files in the git repository. Finally you clients can then run a simple one line command to start getting updates from the server (into the /config directory).
+Sillelien Configurator is a tool to allow the editing of Docker runtime configuration files. Consider it as an easy to use simplified version of [etcd](https://coreos.com/etcd/) that follows the unix philosophy of "everything is a file". So instead of a custom REST interface you get to edit files in a git repository.
+
+With Configurator you can quickly add a high quality mechanism for changing the runtime configuration of your images. For example Configurator is used in [Sillelien Scheduler](https://github.com/sillelien/scheduler) to allow editing of schedules.
+
+Sillelien Configurator comes in three parts, a git server, an editor and your clients. The server must stay at a fixed location and have a mapped volume onto the host, it manages a very simple git repository containing your configuration. The editor is a seperate image powered by [Codebox](http://codebox.io) which allows you to edit any of the files in the git repository within a web based IDE. Finally your clients can then run a simple one line command (below) to start getting updates from the server (into the /config directory).
+
+```bash
+    curl http://${SCSERVER_PORT_1500_TCP_ADDR}:${SCSERVER_PORT_1500_TCP_PORT} | sh
+```
+
 
 ## Quick Start
 
@@ -92,11 +101,5 @@ Test Client: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-client.s
 Server: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-server.svg?style=flat)](https://imagelayers.io/?images=sillelien/sc-server:latest 'Get your own badge on imagelayers.io') 
 
 Editor: [![Image Layers](https://badge.imagelayers.io/sillelien/sc-editor.svg?style=flat)](https://imagelayers.io/?images=sillelien/sc-editor:latest 'Get your own badge on imagelayers.io') 
-
-[![GitHub License](https://img.shields.io/github/license/sillelien/configurator.svg?style=flat)](https://raw.githubusercontent.com/sillelien/configurator/master/LICENSE)
-
-[![GitHub Issues](https://img.shields.io/github/issues/sillelien/configurator.svg?style=flat)](https://github.com/sillelien/configurator/issues)
-    
-
 
 ${FOOTER}
